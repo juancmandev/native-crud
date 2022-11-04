@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native';
-import { home } from '../styles/styles';
+import { home } from '../styles/main';
 
 const Home = () => {
   return (
