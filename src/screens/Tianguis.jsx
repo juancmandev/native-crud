@@ -1,5 +1,5 @@
 import { View, Text } from 'react-native';
-import { home } from '../styles/main';
+import { home } from '../styles';
 
 const Tianguis = () => {
   return (
