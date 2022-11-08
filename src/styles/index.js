@@ -9,6 +9,13 @@ export const home = StyleSheet.create({
   },
 });
 
+export const productList = StyleSheet.create({
+  flatListContentContainer: {
+    paddingHorizontal: 5,
+    marginTop: Platform.OS === 'android' ? 30 : 60,
+  },
+});
+
 export const productCard = StyleSheet.create({
   card: {
     flex: 1,
