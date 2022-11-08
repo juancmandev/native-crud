@@ -11,8 +11,9 @@ export const home = StyleSheet.create({
 
 export const productList = StyleSheet.create({
   flatListContentContainer: {
-    paddingHorizontal: 5,
-    marginTop: Platform.OS === 'android' ? 30 : 60,
+    paddingHorizontal: 4,
+    paddingVertical: 60,
+    marginTop: Platform.OS === 'android' ? 30 : 20,
   },
 });
 
@@ -23,6 +24,7 @@ export const productCard = StyleSheet.create({
     minWidth: 300,
     maxHeight: 520,
     borderRadius: 16,
+    marginBottom: 20,
   },
   imageContainer: {
     maxHeight: 340,
