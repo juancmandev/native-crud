@@ -1,24 +1,10 @@
 import { FlatList } from 'react-native';
 import ProductCard from '../components/ProductCard';
+import useGetAllProducts from '../hooks/useGetAllProducts';
 import { productList } from '../styles';
 
 const ProductList = () => {
-  const products = [
-    {
-      image:
-        'https://asset.vg247.com/metroid_dread_art.jpg/BROK/resize/1920x1920%3E/format/jpg/quality/80/metroid_dread_art.jpg',
-      name: 'Product A',
-      price: '9.99',
-      description: 'Amazing product!',
-    },
-    {
-      image:
-        'https://asset.vg247.com/metroid_dread_art.jpg/BROK/resize/1920x1920%3E/format/jpg/quality/80/metroid_dread_art.jpg',
-      name: 'Product B',
-      price: '9.99',
-      description: 'Amazing product!',
-    },
-  ];
+  const products = useGetAllProducts();
 
   return (
     <FlatList
