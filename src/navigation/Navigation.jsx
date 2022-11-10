@@ -1,33 +1,32 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Tianguis from '../screens/Tianguis';
-import SellProduct from '../screens/SellProduct';
 import Account from '../screens/Account';
-import { Entypo } from '@expo/vector-icons';
-import { Ionicons } from '@expo/vector-icons';
-import { Ionicons as PersonIcon } from '@expo/vector-icons';
+import AddUser from '../screens/AddUser';
+import UsersCRUD from '../screens/UsersCRUD';
+import { FontAwesome5 } from '@expo/vector-icons';
+import { FontAwesome } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
 const Navigation = () => {
   return (
-    <Tab.Navigator initialRouteName='Home'>
+    <Tab.Navigator initialRouteName='UsersCRUD'>
       <Tab.Screen
-        name='Tianguis'
-        component={Tianguis}
+        name='AddUser'
+        component={AddUser}
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Entypo name='shopping-cart' size={24} color={color} />
+            <FontAwesome name='user-plus' size={24} color={color} />
           ),
         }}
       />
       <Tab.Screen
-        name='Sell Product'
-        component={SellProduct}
+        name='UsersCRUD'
+        component={UsersCRUD}
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <Ionicons name='add-circle-sharp' size={24} color={color} />
+            <FontAwesome5 name='users-cog' size={24} color={color} />
           ),
         }}
       />
@@ -37,7 +36,7 @@ const Navigation = () => {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <PersonIcon name='md-person-sharp' size={24} color={color} />
+            <FontAwesome name='user' size={24} color={color} />
           ),
         }}
       />
