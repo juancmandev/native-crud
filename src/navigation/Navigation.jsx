@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Account from '../screens/Account';
 import AddUser from '../screens/AddUser';
-import UsersCRUD from '../screens/UsersCRUD';
+import PersonsCRUD from './PersonsCRUD';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 
@@ -21,8 +21,8 @@ const Navigation = () => {
         }}
       />
       <Tab.Screen
-        name='UsersCRUD'
-        component={UsersCRUD}
+        name='Persons CRUD'
+        component={PersonsCRUD}
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
