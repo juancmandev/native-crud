@@ -112,7 +112,7 @@ const AddPerson = (props) => {
         onChangeText={(text) => formik.setFieldValue('job', text)}
       />
       <Button title='Add' onPress={formik.handleSubmit} />
-      <Button title='Cancel' onPress={navigation.goBack} />
+      <Button color='red' title='Cancel' onPress={navigation.goBack} />
     </View>
   );
 };
