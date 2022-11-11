@@ -91,4 +91,13 @@ export const modal = StyleSheet.create({
     borderRadius: 16,
     backgroundColor: '#fff',
   },
+  title: {
+    fontSize: 18,
+    fontWeight: '600',
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  button: {
+    marginBottom: 20,
+  },
 });

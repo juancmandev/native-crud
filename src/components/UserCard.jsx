@@ -1,9 +1,11 @@
 import { useState } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Button } from 'react-native';
 import Modal from 'react-native-modal';
 import { MaterialIcons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { db } from '../firebase';
+import { doc, deleteDoc } from 'firebase/firestore';
 import { productCard, modal } from '../styles';
 
 const UserCard = ({ data }) => {
@@ -22,6 +24,15 @@ const UserCard = ({ data }) => {
     });
   };
 
+  const deletePerson = async () => {
+    const deleteRef = await deleteDoc(doc(db, 'persons', id));
+
+    setDeleteModal(false);
+    navigation.push('PersonsCRUDList', {
+      edited: true,
+    });
+  };
+
   const DeleteModal = () => {
     return (
       <View style={modal.container}>
@@ -31,8 +42,15 @@ const UserCard = ({ data }) => {
           swipeDirection='up'
           isVisible={deleteModal}>
           <View style={modal.modalBackground}>
-            <Text>Delete</Text>
-            <Text>{id}</Text>
+            <Text style={modal.title}>
+              Delete {firstName} {lastName}?
+            </Text>
+            <Button
+              onPress={deletePerson}
+              style={modal.button}
+              title='Yes, delete'
+            />
+            <Button title='No, cancel' />
           </View>
         </Modal>
       </View>
