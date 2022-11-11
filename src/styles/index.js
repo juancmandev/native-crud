@@ -2,6 +2,7 @@ import { StyleSheet } from 'react-native';
 
 export const home = StyleSheet.create({
   container: {
+    paddingBottom: 20,
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
@@ -11,7 +12,7 @@ export const home = StyleSheet.create({
 
 export const editPerson = StyleSheet.create({
   view: {
-    paddingTop: 100,
+    paddingTop: 140,
   },
   header: {
     marginLeft: 12,
@@ -37,6 +38,7 @@ export const productCard = StyleSheet.create({
   background: {
     flex: 1,
     width: 380,
+    marginBottom: 40,
     maxHeight: 160,
     paddingVertical: 16,
     paddingHorizontal: 12,

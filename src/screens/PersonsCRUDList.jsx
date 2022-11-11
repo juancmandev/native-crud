@@ -1,11 +1,12 @@
 import { useState, useEffect } from 'react';
-import { View, FlatList, Text } from 'react-native';
+import { View, FlatList, Button } from 'react-native';
 import getAllPersons from '../api/getAllPersons';
 import UserCard from '../components/UserCard';
 import { home, productList } from '../styles';
-import { editPerson } from '../styles';
+import { useNavigation } from '@react-navigation/native';
 
 const PersonsCRUDList = ({ navigation }) => {
+  const navigationRoute = useNavigation();
   const [persons, setPersons] = useState(undefined);
   useEffect(() => {
     (async () => {
@@ -35,6 +36,10 @@ const PersonsCRUDList = ({ navigation }) => {
           />
         )}
       </>
+      <Button
+        title='Add person'
+        onPress={() => navigationRoute.push('Add Person')}
+      />
     </View>
   );
 };

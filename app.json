@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "digital-tianguis",
-    "slug": "digital-tianguis",
+    "name": "native-crud",
+    "slug": "native-crud",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
