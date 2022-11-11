@@ -48,9 +48,10 @@ const UserCard = ({ data }) => {
             <Button
               onPress={deletePerson}
               style={modal.button}
+              color='red'
               title='Yes, delete'
             />
-            <Button title='No, cancel' />
+            <Button onPress={() => setDeleteModal(false)} title='No, cancel' />
           </View>
         </Modal>
       </View>

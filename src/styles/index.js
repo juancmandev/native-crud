@@ -10,9 +10,16 @@ export const home = StyleSheet.create({
   },
 });
 
+export const button = StyleSheet.create({
+  primary: {
+    backgroundColor: '#3e83f7',
+  },
+});
+
 export const editPerson = StyleSheet.create({
   view: {
     paddingTop: 140,
+    paddingHorizontal: 40,
   },
   header: {
     marginLeft: 12,
@@ -71,9 +78,14 @@ export const productCard = StyleSheet.create({
 });
 
 export const input = StyleSheet.create({
+  label: {
+    fontSize: 16,
+    fontWeight: '400',
+    marginBottom: 12,
+  },
   text: {
     height: 40,
-    margin: 12,
+    marginBottom: 28,
     borderWidth: 1,
     padding: 10,
     borderRadius: 8,

@@ -1,8 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Account from '../screens/Account';
 import PersonsCRUD from './PersonsCRUD';
 import { FontAwesome5 } from '@expo/vector-icons';
-import { FontAwesome } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 
@@ -16,16 +14,6 @@ const Navigation = () => {
           headerShown: false,
           tabBarIcon: ({ color }) => (
             <FontAwesome5 name='users-cog' size={24} color={color} />
-          ),
-        }}
-      />
-      <Tab.Screen
-        name='Account'
-        component={Account}
-        options={{
-          headerShown: false,
-          tabBarIcon: ({ color }) => (
-            <FontAwesome name='user' size={24} color={color} />
           ),
         }}
       />

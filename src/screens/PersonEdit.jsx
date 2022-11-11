@@ -4,8 +4,7 @@ import { db } from '../firebase';
 import { doc, updateDoc } from 'firebase/firestore';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import Icon from 'react-native-vector-icons/FontAwesome5';
-import { input, editPerson } from '../styles';
+import { input, editPerson, button } from '../styles';
 
 const PersonEdit = (props) => {
   const {
@@ -87,28 +86,30 @@ const PersonEdit = (props) => {
 
   return (
     <View style={editPerson.view}>
+      <Text style={input.label}>First name</Text>
       <TextInput
         editable
         style={input.text}
-        placeholder='First name'
+        placeholder='John'
         value={formik.values.firstName}
         onChangeText={(text) => formik.setFieldValue('firstName', text)}
       />
-
+      <Text style={input.label}>Last name</Text>
       <TextInput
         style={input.text}
-        placeholder='Last name'
+        placeholder='Smith'
         value={formik.values.lastName}
         onChangeText={(text) => formik.setFieldValue('lastName', text)}
       />
+      <Text style={input.label}>Job</Text>
       <TextInput
         style={input.text}
-        placeholder='Job'
+        placeholder='Frontend Developer'
         value={formik.values.job}
         onChangeText={(text) => formik.setFieldValue('job', text)}
       />
       <Button title='Edit' onPress={formik.handleSubmit} />
-      <Button title='Cancel' onPress={navigation.goBack} />
+      <Button color='red' title='Cancel' onPress={navigation.goBack} />
     </View>
   );
 };

@@ -89,22 +89,25 @@ const AddPerson = (props) => {
 
   return (
     <View style={editPerson.view}>
+      <Text style={input.label}>First name</Text>
       <TextInput
         editable
         style={input.text}
-        placeholder='First name'
+        placeholder='John'
         value={formik.values.firstName}
         onChangeText={(text) => formik.setFieldValue('firstName', text)}
       />
+      <Text style={input.label}>Last name</Text>
       <TextInput
         style={input.text}
-        placeholder='Last name'
+        placeholder='Smith'
         value={formik.values.lastName}
         onChangeText={(text) => formik.setFieldValue('lastName', text)}
       />
+      <Text style={input.label}>Job</Text>
       <TextInput
         style={input.text}
-        placeholder='Job'
+        placeholder='Frontend Developer'
         value={formik.values.job}
         onChangeText={(text) => formik.setFieldValue('job', text)}
       />
